@@ -84,6 +84,8 @@ if (jQuery != undefined) {
                 'animation': google.maps.Animation.DROP
             });
             google.maps.event.addListener(marker, 'dragend', function() {
+
+                console.log("LEEEROYYYY JENCKINS ")
                 $latitudeField.val(this.position.lat());
                 $longitudeField.val(this.position.lng());
                 
@@ -104,7 +106,7 @@ if (jQuery != undefined) {
     
     $(document).ready(function() {
         var $script = $('<script/>');
-        $script.attr('src', 'https://maps.google.com/maps/api/js?sensor=false&callback=geopositionMapInit');
+        $script.attr('src', 'http://maps.google.com/maps/api/js?sensor=false&callback=geopositionMapInit');
         $script.appendTo('body');
     });
 })(django.jQuery);
